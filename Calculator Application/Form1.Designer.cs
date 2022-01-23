@@ -54,6 +54,7 @@
             this.btnPowXY = new System.Windows.Forms.Button();
             this.button24 = new System.Windows.Forms.Button();
             this.textBox_Result = new System.Windows.Forms.TextBox();
+            this.labelOperationValue = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
@@ -323,7 +324,7 @@
             // textBox_Result
             // 
             this.textBox_Result.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_Result.Location = new System.Drawing.Point(37, 27);
+            this.textBox_Result.Location = new System.Drawing.Point(37, 33);
             this.textBox_Result.Multiline = true;
             this.textBox_Result.Name = "textBox_Result";
             this.textBox_Result.Size = new System.Drawing.Size(318, 35);
@@ -331,11 +332,22 @@
             this.textBox_Result.Text = "0";
             this.textBox_Result.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
+            // labelOperationValue
+            // 
+            this.labelOperationValue.AutoSize = true;
+            this.labelOperationValue.BackColor = System.Drawing.SystemColors.Window;
+            this.labelOperationValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelOperationValue.Location = new System.Drawing.Point(37, 5);
+            this.labelOperationValue.Name = "labelOperationValue";
+            this.labelOperationValue.Size = new System.Drawing.Size(0, 25);
+            this.labelOperationValue.TabIndex = 25;
+            // 
             // Calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(390, 487);
+            this.Controls.Add(this.labelOperationValue);
             this.Controls.Add(this.textBox_Result);
             this.Controls.Add(this.button24);
             this.Controls.Add(this.btnPowXY);
@@ -365,6 +377,7 @@
             this.MaximizeBox = false;
             this.Name = "Calculator";
             this.Text = "Calculator";
+            this.Load += new System.EventHandler(this.Calculator_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -397,6 +410,7 @@
         private System.Windows.Forms.Button btnPowXY;
         private System.Windows.Forms.Button button24;
         private System.Windows.Forms.TextBox textBox_Result;
+        private System.Windows.Forms.Label labelOperationValue;
     }
 }
 

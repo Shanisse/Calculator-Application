@@ -43,12 +43,14 @@ namespace Calculator_Application
             {
                 button20.PerformClick();
                 operationPerform = button.Text;
+                labelOperationValue.Text = resultVal + "  " + operationPerform;
                 aOperationPerform = true;
             }
             else
             {
                 operationPerform = button.Text;
                 resultVal = Double.Parse(textBox_Result.Text);
+                labelOperationValue.Text = resultVal + "  " + operationPerform;
                 aOperationPerform = true;
             }
         }
@@ -129,6 +131,9 @@ namespace Calculator_Application
             textBox_Result.Text = System.Convert.ToString(sr);
         }
 
-       
+        private void Calculator_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
