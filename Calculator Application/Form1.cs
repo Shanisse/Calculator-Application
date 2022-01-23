@@ -53,12 +53,12 @@ namespace Calculator_Application
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnClearEntry_Click(object sender, EventArgs e)
         {
             textBox_Result.Text = "0";
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnClear_Click(object sender, EventArgs e)
         {
             textBox_Result.Text = "0";
             resultVal = 0;
@@ -80,12 +80,15 @@ namespace Calculator_Application
                 case "/":
                     textBox_Result.Text = (resultVal / Double.Parse(textBox_Result.Text)).ToString();
                     break;
+                case "x^y":
+                    textBox_Result.Text = Math.Pow(Double.Parse(textBox_Result.Text),resultVal).ToString();
+                    break;
                 default:
                     break;
             }
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void btnDelete_Click(object sender, EventArgs e)
         {
             if(textBox_Result.Text.Length > 0)
             {
@@ -98,37 +101,34 @@ namespace Calculator_Application
             }
         }
 
-        private void button17_Click(object sender, EventArgs e)
+        private void btnPlusMinus_Click(object sender, EventArgs e)
         {
             double x = Convert.ToDouble(textBox_Result.Text);
             textBox_Result.Text = Convert.ToString(-1 * x);
         }
 
-        private void button24_Click(object sender, EventArgs e)
+        private void btn1overX_Click(object sender, EventArgs e)
         {
             Double x;
             x = Convert.ToDouble(1.0 / Convert.ToDouble(textBox_Result.Text));
             textBox_Result.Text = System.Convert.ToString(x);
         }
 
-        private void button23_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button22_Click(object sender, EventArgs e)
+       private void btnXraise2_Click(object sender, EventArgs e)
         {
             Double x;
             x = Convert.ToDouble(textBox_Result.Text) * Convert.ToDouble(textBox_Result.Text);
             textBox_Result.Text = System.Convert.ToString(x);
         }
 
-        private void button21_Click(object sender, EventArgs e)
+        private void btnSqrt_Click(object sender, EventArgs e)
         {
             double sr = Double.Parse(textBox_Result.Text);
             textBox_Result.Text = System.Convert.ToString(textBox_Result.Text);
             sr = Math.Sqrt(sr);
             textBox_Result.Text = System.Convert.ToString(sr);
         }
+
+       
     }
 }

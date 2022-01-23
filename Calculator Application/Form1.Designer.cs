@@ -51,7 +51,7 @@
             this.button20 = new System.Windows.Forms.Button();
             this.button21 = new System.Windows.Forms.Button();
             this.button22 = new System.Windows.Forms.Button();
-            this.button23 = new System.Windows.Forms.Button();
+            this.btnPowXY = new System.Windows.Forms.Button();
             this.button24 = new System.Windows.Forms.Button();
             this.textBox_Result = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
@@ -65,7 +65,7 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "CE";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.btnClearEntry_Click);
             // 
             // button2
             // 
@@ -76,7 +76,7 @@
             this.button2.TabIndex = 1;
             this.button2.Text = "C";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // button3
             // 
@@ -87,7 +87,7 @@
             this.button3.TabIndex = 2;
             this.button3.Text = "Del.";
             this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button3.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // button4
             // 
@@ -241,7 +241,7 @@
             this.button17.TabIndex = 16;
             this.button17.Text = "+/-";
             this.button17.UseVisualStyleBackColor = true;
-            this.button17.Click += new System.EventHandler(this.button17_Click);
+            this.button17.Click += new System.EventHandler(this.btnPlusMinus_Click);
             // 
             // button18
             // 
@@ -285,7 +285,7 @@
             this.button21.TabIndex = 20;
             this.button21.Text = "Sqrt";
             this.button21.UseVisualStyleBackColor = true;
-            this.button21.Click += new System.EventHandler(this.button21_Click);
+            this.button21.Click += new System.EventHandler(this.btnSqrt_Click);
             // 
             // button22
             // 
@@ -296,18 +296,18 @@
             this.button22.TabIndex = 21;
             this.button22.Text = "x^2";
             this.button22.UseVisualStyleBackColor = true;
-            this.button22.Click += new System.EventHandler(this.button22_Click);
+            this.button22.Click += new System.EventHandler(this.btnXraise2_Click);
             // 
-            // button23
+            // btnPowXY
             // 
-            this.button23.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button23.Location = new System.Drawing.Point(199, 79);
-            this.button23.Name = "button23";
-            this.button23.Size = new System.Drawing.Size(75, 45);
-            this.button23.TabIndex = 22;
-            this.button23.Text = "x^y";
-            this.button23.UseVisualStyleBackColor = true;
-            this.button23.Click += new System.EventHandler(this.button23_Click);
+            this.btnPowXY.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPowXY.Location = new System.Drawing.Point(199, 79);
+            this.btnPowXY.Name = "btnPowXY";
+            this.btnPowXY.Size = new System.Drawing.Size(75, 45);
+            this.btnPowXY.TabIndex = 22;
+            this.btnPowXY.Text = "x^y";
+            this.btnPowXY.UseVisualStyleBackColor = true;
+            this.btnPowXY.Click += new System.EventHandler(this.operator_click);
             // 
             // button24
             // 
@@ -318,7 +318,7 @@
             this.button24.TabIndex = 23;
             this.button24.Text = "1/x";
             this.button24.UseVisualStyleBackColor = true;
-            this.button24.Click += new System.EventHandler(this.button24_Click);
+            this.button24.Click += new System.EventHandler(this.btn1overX_Click);
             // 
             // textBox_Result
             // 
@@ -338,7 +338,7 @@
             this.ClientSize = new System.Drawing.Size(390, 487);
             this.Controls.Add(this.textBox_Result);
             this.Controls.Add(this.button24);
-            this.Controls.Add(this.button23);
+            this.Controls.Add(this.btnPowXY);
             this.Controls.Add(this.button22);
             this.Controls.Add(this.button21);
             this.Controls.Add(this.button20);
@@ -394,7 +394,7 @@
         private System.Windows.Forms.Button button20;
         private System.Windows.Forms.Button button21;
         private System.Windows.Forms.Button button22;
-        private System.Windows.Forms.Button button23;
+        private System.Windows.Forms.Button btnPowXY;
         private System.Windows.Forms.Button button24;
         private System.Windows.Forms.TextBox textBox_Result;
     }
